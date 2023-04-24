@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\Semester 8\\PRN221\\PizzaStore\\PizzaStore\\PizzaStore.csproj": {}
+    "E:\\Semester_8\\PRN221_ReLearn\\PizzaStore\\PizzaStore\\PizzaStore.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\Semester 8\\PRN221\\PizzaStore\\PizzaStore\\PizzaStore.csproj": {
+    "E:\\Semester_8\\PRN221_ReLearn\\PizzaStore\\PizzaStore\\PizzaStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\Semester 8\\PRN221\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
+        "projectUniqueName": "E:\\Semester_8\\PRN221_ReLearn\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
         "projectName": "PizzaStore",
-        "projectPath": "D:\\FPT\\Semester 8\\PRN221\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
-        "packagesPath": "C:\\Users\\quang.khuat\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\Semester 8\\PRN221\\PizzaStore\\PizzaStore\\obj\\",
+        "projectPath": "E:\\Semester_8\\PRN221_ReLearn\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
+        "packagesPath": "C:\\Users\\Khuat Tien Quang\\.nuget\\packages\\",
+        "outputPath": "E:\\Semester_8\\PRN221_ReLearn\\PizzaStore\\PizzaStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\quang.khuat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Khuat Tien Quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -22,18 +22,39 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Products/Index">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Categories/Index">Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Suppliers/Index">Suppliers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Orders/Index">Orders</a>
-                        </li>
+                        @if (Context.Session.GetString("IsAdmin") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Products/Index">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Categories/Index">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Suppliers/Index">Suppliers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Orders/Index">Orders</a>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        @if (Context.Session.GetString("IsAdmin") != null || Context.Session.GetString("CustSession") != null)
+                        {
+                            <li class="nav-item">
+                                <a asp-page="/Accounts/LogOut" class="btn">Log out</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a asp-page="/Accounts/Login" class="btn btn-primary">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-page="/Accounts/Register" class="btn">Sign Up</a>
+                            </li>
+                        }
+
                     </ul>
                 </div>
             </div>
@@ -58,3 +79,9 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<script>
+    function myFunction() {
+        confirm("Are you sure want!");
+    }
+</script>

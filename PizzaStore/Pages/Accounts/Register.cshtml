@@ -1,0 +1,49 @@
+﻿@page
+@model PizzaStore.Pages.Accounts.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1>Sign up</h1>
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label>Account ID</label>
+                    <input class="form-control" placeholder="Enter Id" asp-for="Account.AccountId">
+                </div>
+                <div class="mb-3">
+                    <label>Username</label>
+                    <input class="form-control" placeholder="Enter username" asp-for="Account.UserName">
+                </div>
+                <div class="mb-3">
+                    <label>Fullname</label>
+                    <input class="form-control" placeholder="Enter fullname" asp-for="Account.FullName">
+                </div>
+                <div class="mb-3">
+                    <label>Contact Name</label>
+                    <input class="form-control" placeholder="Enter username" asp-for="Customer.ContactName">
+                </div>
+                <div class="mb-3">
+                    <label>Address</label>
+                    <input class="form-control" placeholder="Enter address" asp-for="Customer.Address">
+                </div>
+                <div class="mb-3">
+                    <label>Phone Number</label>
+                    <input t class="form-control" placeholder="Enter phone number" asp-for="Customer.Phone">
+                </div>
+                <div class="mb-3">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Account.Password">
+                </div>
+                <div class="mb-3">
+                    <label>Re-Password</label>
+                    <input type="password" class="form-control" placeholder="Re-Password" asp-for="RePassword">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button><br />
+                <span class="msg-error">@ViewData["msg-repassword"]</span>
+                <span class="msg-error">@ViewData["msg"]</span><br />
+            </form>
+        </div>
+    </div>
+</div>

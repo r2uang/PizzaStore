@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddSession(otp => otp.IdleTimeout = TimeSpan.FromMinutes(5));
 builder.Services.AddDbContext<PRN221_As02Context>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("PRN221_As02Context")));
 
@@ -24,6 +24,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 app.UseAuthentication();;
 
 app.UseAuthorization();
