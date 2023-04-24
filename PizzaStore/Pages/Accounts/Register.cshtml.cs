@@ -66,7 +66,7 @@ namespace PizzaStore.Pages.Accounts
                 await dbContext.Customers.AddAsync(customer);
                 await dbContext.Accounts.AddAsync(newAcc);
                 await dbContext.SaveChangesAsync();
-                return RedirectToPage("/Index");
+                return RedirectToPage("/Accounts/Login");
             }
         }
     }

@@ -3,11 +3,41 @@
 @{
     ViewData["Title"] = "Products";
 }
-<div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Add Order</a>
-  </div>
+<form action="" method="post">
+    <div class="row">
+        <div class="col-sm-2">
+            <select class="form-select" aria-label="Default select example">
+                <option value="0">ID</option>
+                <option value="1" selected>Name</option>
+                <option value="2">UnitPrice</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Keywords">
+        </div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>
+<br />
+<div class="row">
+    @foreach (var item in Model.Product)
+    {
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/Veggie-mania.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title" style="color:cornflowerblue">@Html.DisplayFor(modelItem => item.ProductName) </h5>
+                        <h5 class="card-title text-end">$@Html.DisplayFor(modelItem => item.UnitPrice) </h5>
+                    </div>
+                    <h6 class="card-title">Category: @Html.DisplayFor(modelItem => item.Category.CategoryName)</h6>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Category.Description)</p>
+                    <a href="#" class="btn btn-primary">Add Pizza</a>
+                </div>
+            </div>
+            <br />
+        </div>
+    }
 </div>

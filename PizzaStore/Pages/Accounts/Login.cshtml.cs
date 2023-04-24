@@ -35,6 +35,7 @@ namespace PizzaStore.Pages.Account
             HttpContext.Session.SetString("CustSession", JsonSerializer.Serialize(acc));
             if (acc.Type == 1)
             {
+                HttpContext.Session.Remove("CustSession");
                 HttpContext.Session.SetString("IsAdmin", "Admin");
                 return Redirect("/Admin/Products");
             }
